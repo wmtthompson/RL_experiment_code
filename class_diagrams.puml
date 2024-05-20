@@ -1,0 +1,20 @@
+
+
+@startuml classes
+Person : name : string
+
+Employee <|-- Person
+Employee : salary : int
+
+
+abstract AbstractStateValueTable
+AbstractStateValueTable : get_value(int) : double
+AbstractStateValueTable : update_return(double) : void
+AbstractStateValueTable : clear_return(int) : void
+
+
+StateValueTable <|-- AbstractStateValueTable
+StateValueTable : m_state_to_value
+StateValueTable : m_state_to_vectors 
+StateValueTable  : m_num_states
+@enduml
